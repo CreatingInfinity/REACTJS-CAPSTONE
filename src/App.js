@@ -22,17 +22,17 @@ function App() {
       <div className="App-header">
         <div>
           <div className="flex center">
-            <Link className="a font title-con">Meriella</Link>
+            <Link className="a font title-con" to={'/'}>Meriella</Link>
           </div>
           <hr className="hr"></hr>
           <div className="a-turner flex center">
             <Link className="a font">
             <span>Categories</span>
             </Link>
-            <Link className="a font">Trending</Link>
-            <Link className="a font">Men's</Link>
-            <Link className="a font">Women's</Link>
-            <Link className="a font">Kid's</Link>
+            <Link className="a font" to={'/trend'} >Trending</Link>
+            <Link className="a font" to={'/men'}>Men's</Link>
+            <Link className="a font" to={'/women'}>Women's</Link>
+            <Link className="a font" to={'/kids'}>Kid's</Link>
             <NewRouter />
           </div>
         </div>
