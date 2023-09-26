@@ -42,7 +42,7 @@ function Shop(){
                     <div className="product-title">コレワ Shirt</div>
                     <div className="product-price">$39.99</div>
                     <div className="product-description">
-                        Be culturally cool even in japan!
+                    Be culturally cool even in japan!
                     </div>
                     <Link to={'/buy'} className="product-button">Buy Here</Link>
                 </div>
