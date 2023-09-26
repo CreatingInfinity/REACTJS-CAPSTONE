@@ -1,19 +1,20 @@
 *{
     padding: 0;
     margin: 0;
+    font-family: 'Montserrat', sans-serif;
 }
 div, span, a{
     background-color: inherit;
 }
 a{
-    color: rgb(227, 159, 24);
+    color: black;
     text-decoration: none;
 }
 ::-webkit-scrollbar{
     display: none;
 }
 .hr{
-    background-color: rgb(57, 49, 3);
+    background-color:black;
     border: none;
     height: 1px;
     width: 50em;
@@ -27,7 +28,6 @@ a{
 .App-header {
     display: grid;
     justify-content: center;
-    background-color: rgb(9, 9, 9);
     padding: 10px 0;
 }
 .bg{
@@ -39,8 +39,12 @@ a{
 .center{
     justify-content: center;
 }
+.around{
+    justify-content: space-around;
+}
 .title-con{
     font-size: 40px;
+    font-family: 'Alegreya SC', serif;
 }
 .flex{
     display: flex;
@@ -50,18 +54,23 @@ a{
     object-fit: contain;
     width: 100%;
     border: 0 2px  solid black;
-    /* box-shadow: 0 0 2px #989d06, 0 0 5px #c2d20b; */
 }
-.a-turner{
-    gap: 20px;
-}
-.font{
-    font-family: 'Alegreya SC', serif;
+.a{
+    color: rgba(0, 0, 0, 0.531);
+    font-size: 14px;
 }
 
 .container{
     display: grid;
     grid-template-columns: repeat(5,20%);
+}
+.width{
+    width: 200px;
+    margin: 10px 0;
+    transition: all 2s;
+}
+.width:hover{
+    width: 400px;
 }
 .box{
     width: 100%;
@@ -114,9 +123,10 @@ a{
     text-decoration: none;
     border: none;
     cursor: pointer;
+    transition: all .2s;
 }
-.product-button:hover span{
-    transform: scale(1.2);
+.product-button:hover{
+    transform: scale(1.05);
 }
 
 

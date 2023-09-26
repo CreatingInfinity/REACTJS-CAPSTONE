@@ -1,17 +1,16 @@
 
 import { Route, Routes } from "react-router-dom";
-import Log from "../page/system/log-in";
-import Sign from "../page/system/sign-up"
-import Buy from "../page/buy";
+import Buy from "../buy";
+import Home from "../home";
+import Shop from "../buy";
 
 function NewRouter(){
     return (
         <Routes>
-            <Route path="/login" element={ <Log /> } />
-            <Route path="/create-account" element={ <Sign /> } />
+            <Route path="/" element={ <Home />} />
+            <Route path="/shop" element={ <Shop />} />
             <Route path="/buy" element={<Buy />} />
         </Routes>
-        
     )
 
 }
