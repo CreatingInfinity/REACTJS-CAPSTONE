@@ -1,0 +1,16 @@
+[
+    {
+        "id": 1,
+        "name": "Black Adidas Jacket",
+        "image": "https://images.pexels.com/photos/2112651/pexels-photo-2112651.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "description": "Perfect Coat for summer season!",
+        "price": 19.99
+        },
+        {
+        "id": "2",
+        "name": "Blue jeans",
+        "image": "https://images.pexels.com/photos/2112651/pexels-photo-2112651.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "description": "Perfect Coat for summer season!",
+        "price": 19.99
+        }
+]

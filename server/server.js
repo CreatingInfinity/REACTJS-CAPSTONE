@@ -13,31 +13,56 @@ app.get('/blog', (req,res) => {
     res.send('Connected');
 })
 
-app.post('/buy', async(req, res) => {
+app.route('/pay')
+  .get((req, res) => {
+    res.json([
+      {
+        "name": 'Printed T-shirts',
+        "image": 'https://images.pexels.com/photos/2112651/pexels-photo-2112651.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+        "description": 'To slay even in plain clothing!',
+        "price": 19.99
+      },
+      {
+        "name": 'Comfy Clothes',
+        "image": 'https://images.pexels.com/photos/3527572/pexels-photo-3527572.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+        "description": 'Good for outdoors and very vibrant!',
+        "price": 10.99
+      },
+      {
+        "name": 'Cute Gown  ',
+        "image": 'https://images.pexels.com/photos/3489129/pexels-photo-3489129.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+        "description": 'Good for outdoors and very vibrant!',
+        "price": 10.99
+      },
+      {
+        "name": 'Fine Dress',
+        "image": 'https://images.pexels.com/photos/2850487/pexels-photo-2850487.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+        "description": 'Good for outdoors and very vibrant!',
+        "price": 10.99
+      },
+      {
+        "name": 'Professional Blouse',
+        "image": 'https://images.pexels.com/photos/2002717/pexels-photo-2002717.jpeg?auto=compress&cs=tinysrgb&w=600',
+        "description": 'Good for outdoors and very vibrant!',
+        "price": 10.99
+      }
+    ]);
+  })
+  app.post('/payment' ,async(req, res) => {
     try {
-        const product = await Product.create(req.body)
-        res.status(200).json(product);
+        const productData = new Product(req.body); // Use the new operator
+        console.log("Received Product Data:", productData);
 
-        const newProduct = new Product({
-            name: 'Black Adidas Jacket',
-            image: '../page/icon/adidas.jpg',
-            price: 19.99,
-          });
-          
-          // Save the document to the database
-        newProduct.save()
-        .then(savedProduct => {
-            console.log('Product saved:', savedProduct);
-        })
-        .catch(error => {
-            console.error('Error saving product:', error);
-        });
+        await productData.save();
         
+        res.status(201).json(productData);
     } catch (error) {
-        console.log(error.message);
-        res.status(500).json({message: error.message})
+      console.log(error.message);
+      res.status(500).json({ message: error.message });
     }
-})
+  });
+
+
 
 
 mongoose.connect
